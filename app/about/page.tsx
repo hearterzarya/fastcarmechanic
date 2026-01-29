@@ -26,9 +26,9 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-silver-400 leading-relaxed">
-                We're on a mission to revolutionize car repair services in the
+                We&apos;re on a mission to revolutionize car repair services in the
                 UAE by bringing certified mechanics directly to you. Whether
-                you're stuck on the road or need scheduled maintenance, we make
+                you&apos;re stuck on the road or need scheduled maintenance, we make
                 car care convenient, transparent, and fast.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 convenient, MechanicUAE has grown to serve thousands of customers
                 across all UAE Emirates. We understand the frustration of car
                 breakdowns and the inconvenience of traditional workshop visits.
-                That's why we bring the workshop to you.
+                That&apos;s why we bring the workshop to you.
               </p>
             </div>
           </div>

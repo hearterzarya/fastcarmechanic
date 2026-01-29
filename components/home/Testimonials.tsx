@@ -38,7 +38,7 @@ const testimonials = [
 
 export function Testimonials() {
   const cardsRef = useRef<HTMLDivElement>(null);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   useEffect(() => {
     if (!cardsRef.current) return;
@@ -101,7 +101,7 @@ export function Testimonials() {
                   )}
                 </div>
                 <p className="text-silver-400 text-sm leading-relaxed">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div className="pt-4 border-t border-silver-200">
                   <p className="font-semibold text-charcoal-200">

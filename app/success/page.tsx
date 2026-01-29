@@ -61,7 +61,7 @@ export default function SuccessPage() {
             Booking Confirmed!
           </h1>
           <p className="text-lg text-silver-400 mb-8">
-            Your mechanic is being dispatched. You'll receive a confirmation
+            Your mechanic is being dispatched. You&apos;ll receive a confirmation
             call shortly.
           </p>
 

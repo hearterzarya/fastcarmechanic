@@ -40,7 +40,7 @@ const faqs = [
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-silver-50">

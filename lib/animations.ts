@@ -109,7 +109,7 @@ export function parallax(
     yPercent: speed * 100,
     ease: "none",
     scrollTrigger: {
-      trigger: element,
+      trigger: element as gsap.DOMTarget,
       start: "top bottom",
       end: "bottom top",
       scrub: true,

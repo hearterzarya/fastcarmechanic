@@ -16,7 +16,7 @@ if (typeof window !== "undefined") {
 export function ServicesGrid() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   useEffect(() => {
     if (!cardsRef.current) return;
@@ -46,10 +46,11 @@ export function ServicesGrid() {
     // Magnetic hover effect for cards
     const cards = cardsRef.current.children;
     Array.from(cards).forEach((card) => {
-      const handleMouseMove = (e: MouseEvent) => {
+      const handleMouseMove = (e: Event) => {
+        const me = e as MouseEvent;
         const rect = (card as HTMLElement).getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
+        const x = me.clientX - rect.left - rect.width / 2;
+        const y = me.clientY - rect.top - rect.height / 2;
 
         gsap.to(card, {
           x: x * 0.05,

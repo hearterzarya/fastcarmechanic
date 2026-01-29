@@ -40,13 +40,15 @@ export function Hero() {
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6 },
         "-=0.4"
-      )
-      .fromTo(
-        badgesRef.current?.children,
+      );
+    if (badgesRef.current?.children) {
+      tl.fromTo(
+        badgesRef.current.children,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
         "-=0.3"
       );
+    }
   }, []);
 
   const trustBadges = [

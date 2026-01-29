@@ -17,8 +17,8 @@ const PHONE_NUMBER = "+971501234567";
 export function EmergencyPanel() {
   const panelRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLAnchorElement>(null);
-  const routeRef = useRef<HTMLDivElement>(null);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const routeRef = useRef<SVGPathElement>(null);
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   useEffect(() => {
     if (!panelRef.current) return;
@@ -28,7 +28,7 @@ export function EmergencyPanel() {
 
     // Animate route line
     if (routeRef.current) {
-      const path = routeRef.current as SVGPathElement;
+      const path = routeRef.current;
       const pathLength = path.getTotalLength();
       
       // Set initial dash array and offset

@@ -26,7 +26,7 @@ export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | "all">("all");
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   const categories = [
     { id: "all", label: "All Services" },
@@ -136,7 +136,7 @@ export default function ServicesPage() {
                       <div className="space-y-6 py-4">
                         <div>
                           <h4 className="font-semibold text-charcoal-200 mb-2">
-                            What's Included
+                            What&apos;s Included
                           </h4>
                           <ul className="space-y-2">
                             {service.included.map((item, index) => (

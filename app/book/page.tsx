@@ -90,7 +90,7 @@ function BookingForm() {
       component: (
         <div className="space-y-4">
           <p className="text-silver-400 mb-6">
-            Select the issue(s) you're experiencing
+            Select the issue(s) you&apos;re experiencing
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {problemTypes.map((problem) => (
@@ -280,7 +280,7 @@ function BookingForm() {
           </Card>
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
             <p className="text-sm text-charcoal-200">
-              <strong>Mechanic dispatched within minutes.</strong> You'll receive
+              <strong>Mechanic dispatched within minutes.</strong> You&apos;ll receive
               a confirmation call shortly.
             </p>
           </div>
@@ -297,7 +297,7 @@ function BookingForm() {
             Book a Mechanic
           </h1>
           <p className="text-silver-400">
-            Fill in the details below. We'll reach you fast!
+            Fill in the details below. We&apos;ll reach you fast!
           </p>
         </div>
 

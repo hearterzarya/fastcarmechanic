@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useGsapReveal } from "@/hooks/useGsapReveal";
 
 export function PricingPreview() {
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   return (
     <section className="py-24 bg-white">

@@ -80,7 +80,7 @@ export function HowItWorks() {
     }
   }, []);
 
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   return (
     <section ref={sectionRef} className="py-24 bg-white">

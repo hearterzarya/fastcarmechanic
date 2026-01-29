@@ -56,7 +56,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-lg text-silver-400 max-w-2xl mx-auto">
-            Get in touch with us. We're here to help 24/7.
+            Get in touch with us. We&apos;re here to help 24/7.
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function ContactPage() {
               </h2>
               {submitted && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-2xl text-green-700">
-                  Thank you! We'll get back to you soon.
+                  Thank you! We&apos;ll get back to you soon.
                 </div>
               )}
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type RefObject } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { fadeUp, blurIn, RevealOptions } from "@/lib/animations";
@@ -9,10 +9,10 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export function useGsapReveal(
+export function useGsapReveal<T extends HTMLElement = HTMLElement>(
   options: RevealOptions & { type?: "fadeUp" | "blurIn" } = {}
-) {
-  const ref = useRef<HTMLElement>(null);
+): RefObject<T> {
+  const ref = useRef<T>(null);
   const prefersReducedMotion =
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;

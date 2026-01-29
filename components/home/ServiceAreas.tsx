@@ -14,7 +14,7 @@ if (typeof window !== "undefined") {
 export function ServiceAreas() {
   const [selectedArea, setSelectedArea] = useState<string | null>(null);
   const chipsRef = useRef<HTMLDivElement>(null);
-  const revealRef = useGsapReveal({ delay: 0.2 });
+  const revealRef = useGsapReveal<HTMLDivElement>({ delay: 0.2 });
 
   useEffect(() => {
     if (!chipsRef.current) return;
